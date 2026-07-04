@@ -44,7 +44,7 @@ const characters = [
 const hero = document.querySelector(".hero");
 const startButton = document.querySelector("#startButton");
 const soundToggle = document.querySelector("#soundToggle");
-const youtubePlayer = document.querySelector("#youtubePlayer");
+const backgroundMusic = document.querySelector("#backgroundMusic");
 const narrationLines = [...document.querySelectorAll(".narration-line")];
 const narrationProgress = document.querySelector("#narrationProgress");
 const tabs = [...document.querySelectorAll(".character-tab")];
@@ -56,28 +56,35 @@ const characterSecret = document.querySelector("#characterSecret");
 
 let soundEnabled = false;
 let narrationTimer;
+const backgroundMusicVolume = 0.16;
+
+function updateSoundButton(enabled) {
+  soundToggle.classList.toggle("is-muted", !enabled);
+  soundToggle.setAttribute("aria-label", enabled ? "배경음 끄기" : "배경음 켜기");
+}
 
 function setSoundState(enabled) {
   soundEnabled = enabled;
-  soundToggle.classList.toggle("is-muted", !enabled);
-  soundToggle.setAttribute("aria-label", enabled ? "배경음 끄기" : "배경음 켜기");
-  youtubePlayer.classList.toggle("is-visible", enabled);
-  youtubePlayer.setAttribute("aria-hidden", enabled ? "false" : "true");
+  updateSoundButton(enabled);
+
+  if (!backgroundMusic) {
+    return;
+  }
 
   if (enabled) {
-    youtubePlayer.innerHTML = `
-      <iframe
-        title="background music"
-        width="180"
-        height="101"
-        src="https://www.youtube.com/embed/oQvgVXNmGJQ?autoplay=1&loop=1&playlist=oQvgVXNmGJQ&controls=1&modestbranding=1&playsinline=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
-    `;
-  } else {
-    youtubePlayer.innerHTML = "";
+    backgroundMusic.volume = backgroundMusicVolume;
+    const playAttempt = backgroundMusic.play();
+    if (playAttempt) {
+      playAttempt.catch(() => {
+        soundEnabled = false;
+        updateSoundButton(false);
+      });
+    }
+    return;
   }
+
+  backgroundMusic.pause();
+  backgroundMusic.currentTime = 0;
 }
 
 function playNarration() {

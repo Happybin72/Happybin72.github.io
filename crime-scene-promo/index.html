@@ -1,170 +1,182 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="컬컴 일본어 크라임씬 모임 홍보 페이지" />
-  <title>컬컴 일본어 크라임씬</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --ink: #fff7e8;
-      --muted: #d8c198;
-      --red: #b83232;
-      --gold: #d6a75d;
-      --bg: #08090b;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    body {
-      background:
-        radial-gradient(circle at 52% 8%, rgba(184, 50, 50, .28), transparent 32rem),
-        radial-gradient(circle at 10% 90%, rgba(214, 167, 93, .16), transparent 28rem),
-        linear-gradient(180deg, rgba(6, 9, 12, .55), rgba(6, 7, 9, .98)),
-        repeating-linear-gradient(115deg, rgba(255, 255, 255, .045) 0 1px, transparent 1px 12px),
-        #08090b;
-    }
-    main {
-      width: min(100%, 720px);
-      margin: 0 auto;
-      padding: 24px 18px 42px;
-    }
-    .hero {
-      min-height: 92svh;
-      display: grid;
-      align-content: center;
-      gap: 24px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--muted);
-      font-weight: 800;
-      letter-spacing: .04em;
-    }
-    .mark {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(214, 167, 93, .7);
-      border-radius: 8px;
-      background: rgba(255, 247, 232, .08);
-      color: var(--gold);
-    }
-    .eyebrow {
-      color: var(--gold);
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: .16em;
-    }
-    h1 {
-      margin: 16px 0 0;
-      font-size: clamp(42px, 15vw, 86px);
-      line-height: .95;
-      letter-spacing: 0;
-    }
-    .lead {
-      color: #f3dfb9;
-      font-size: clamp(18px, 4.8vw, 25px);
-      line-height: 1.55;
-      margin: 0;
-    }
-    .panel {
-      border: 1px solid rgba(214, 167, 93, .45);
-      background: rgba(9, 11, 13, .76);
-      padding: 18px;
-      border-radius: 8px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
-    }
-    .facts {
-      display: grid;
-      gap: 10px;
-    }
-    .fact {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 13px 14px;
-      border-radius: 6px;
-      background: rgba(255, 247, 232, .08);
-      border: 1px solid rgba(255, 247, 232, .12);
-    }
-    .fact b { color: var(--gold); }
-    .survey {
-      margin: 12px 0 0;
-      color: #f4dfba;
-      line-height: 1.55;
-    }
-    section { padding: 34px 0; }
-    h2 {
-      margin: 0 0 14px;
-      font-size: 28px;
-    }
-    p { line-height: 1.7; }
-    .cards {
-      display: grid;
-      gap: 12px;
-    }
-    .card {
-      padding: 18px;
-      border-radius: 8px;
-      background: rgba(255, 247, 232, .08);
-      border: 1px solid rgba(255, 247, 232, .12);
-    }
-    .card strong {
-      color: var(--gold);
-      display: block;
-      margin-bottom: 6px;
-    }
-    footer {
-      color: var(--muted);
-      font-size: 13px;
-      padding: 24px 0 10px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <div class="hero">
-      <div class="brand"><span class="mark">CC</span><span>CULCOM JAPANESE CRIME SCENE</span></div>
-      <div>
-        <div class="eyebrow">매번 다른 컨셉으로 열리는 일본어 추리 모임</div>
-        <h1>컬컴<br />일본어<br />크라임씬</h1>
-      </div>
-      <p class="lead">놀러 간 여행지, 닫힌 방, 사라진 알리바이. 참가자는 각자의 비밀을 숨긴 채 범인을 찾고 일본어로 의심을 주고받습니다.</p>
-      <div class="panel">
-        <div class="facts">
-          <div class="fact"><b>1. 인원</b><span>4명부터</span></div>
-          <div class="fact"><b>2. 참가비</b><span>5천원</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="일본 시골 료칸에서 벌어진 크라임씬 시나리오, 안개 너머의 료칸 홍보 페이지"
+    />
+    <title>안개 너머의 료칸 | 일본어 크라임씬</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="rain-layer" aria-hidden="true"></div>
+        <header class="topbar" aria-label="페이지 상단">
+          <a class="brand" href="#top" aria-label="안개 너머의 료칸 첫 화면">
+            <span class="brand-mark">霧</span>
+            <span>Crime Scene</span>
+          </a>
+          <button class="icon-button" id="soundToggle" type="button" aria-label="배경음 켜기">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 9.5v5h3.7l4.3 3.4V6.1L7.7 9.5H4Z" />
+              <path class="sound-wave" d="M16 9.2c.8.8 1.2 1.8 1.2 2.8S16.8 14 16 14.8" />
+              <path class="sound-wave wide" d="M18.4 6.8a7.3 7.3 0 0 1 0 10.4" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="hero-content">
+          <p class="jp-title">霧の向こうの旅館</p>
+          <h1 id="page-title"><span>안개 너머의</span><span>료칸</span></h1>
+          <p class="hero-copy">
+            친구의 초대로 찾아간 산골 온천마을.<br />
+            비가 길을 끊고, 밤 아홉 시 십 분,<br />
+            정원 우물가에서 한 사람이 쓰러진다.
+          </p>
+          <button class="primary-button" id="startButton" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7-11-7Z" />
+            </svg>
+            입장하기
+          </button>
         </div>
-        <p class="survey">3. 시나리오는 매번 참가자에게 설문조사해서 컨셉을 조사해 매번 다르게 기획하겠음.</p>
-      </div>
-    </div>
 
-    <section>
-      <h2>진행 방식</h2>
-      <div class="cards">
-        <div class="card"><strong>캐릭터 배정</strong>각자 역할과 비밀, 알리바이를 받습니다.</div>
-        <div class="card"><strong>증거 공개</strong>단서가 공개될수록 서로의 말이 어긋납니다.</div>
-        <div class="card"><strong>추리와 투표</strong>질문하고 의심하고 마지막에 범인을 지목합니다.</div>
-      </div>
-    </section>
+        <div class="narration-panel" aria-live="polite">
+          <div class="narration-line active">산길은 폭우로 막혔다.</div>
+          <div class="narration-line">료칸의 불빛만이 안개 속에서 흔들렸다.</div>
+          <div class="narration-line">피해자는 모두의 비밀을 알고 있었다.</div>
+          <div class="narration-line">이제, 당신은 누구의 거짓말을 믿을 것인가.</div>
+          <div class="narration-progress" aria-hidden="true">
+            <span id="narrationProgress"></span>
+          </div>
+        </div>
 
-    <section>
-      <h2>참가 안내</h2>
-      <p>일본어 실력보다 중요한 건 몰입과 추리입니다. 초급자는 한국어를 섞어도 괜찮고, 역할극에 부담 없는 방식으로 진행합니다.</p>
-    </section>
+        <a class="scroll-cue" href="#case" aria-label="사건 소개로 이동">
+          <span></span>
+        </a>
+      </section>
 
-    <footer>컬컴 일본어 모임 | Crime Scene Promotion</footer>
-  </main>
-</body>
+      <section class="case-section" id="case">
+        <div class="section-inner">
+          <div class="section-copy">
+            <h2>여행은 축제로 시작됐고, 심문으로 끝난다.</h2>
+            <p>
+              일본 나가노현 산골 마을 미즈모리촌. 컬컴 일본어 모임 멤버들은
+              현지 코디네이터 나카하라 레나의 안내로 오래된 온천 료칸
+              <strong>아오츠키장</strong>에 도착한다.
+            </p>
+            <p>
+              레나는 밤 9시 30분 라이브 방송에서 “이번 여행의 진짜 이야기”를
+              공개하겠다고 말한다. 20분 뒤, 그녀는 정원 우물가에서 차갑게
+              발견된다.
+            </p>
+          </div>
+          <div class="case-facts" aria-label="사건 정보">
+            <article>
+              <span>피해자</span>
+              <strong>나카하라 레나</strong>
+              <p>여행 코디네이터 겸 브이로거</p>
+            </article>
+            <article>
+              <span>발견 시각</span>
+              <strong>21:10</strong>
+              <p>호타루 등불 축제의 밤</p>
+            </article>
+            <article>
+              <span>현장</span>
+              <strong>정원 우물가</strong>
+              <p>깨진 유자주 잔과 젖은 발자국</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="character-section" id="characters">
+        <div class="section-inner">
+          <div class="section-heading">
+            <h2>모든 인물은 비밀을 품고 있다.</h2>
+            <p>
+              겉으로는 여행객, 속으로는 각자의 약점을 숨긴 용의자들. 탭을 눌러
+              각 캐릭터의 공개 정보와 감춰진 의심 포인트를 확인하세요.
+            </p>
+          </div>
+
+          <div class="lineup-frame">
+            <img
+              src="./assets/character-lineup.png"
+              alt="안개 낀 료칸 정원에 선 다섯 명의 카툰 렌더링 캐릭터"
+            />
+          </div>
+
+          <div class="character-tabs" role="tablist" aria-label="캐릭터 선택">
+            <button class="character-tab active" type="button" data-character="0">지윤</button>
+            <button class="character-tab" type="button" data-character="1">도윤</button>
+            <button class="character-tab" type="button" data-character="2">서아</button>
+            <button class="character-tab" type="button" data-character="3">준호</button>
+            <button class="character-tab" type="button" data-character="4">유키</button>
+          </div>
+
+          <article class="character-card" id="characterCard">
+            <p class="character-role" id="characterRole">탐정</p>
+            <h3 id="characterName">한지윤</h3>
+            <p id="characterDesc">
+              이번 여행을 추진한 일본어 모임 리더. 사건을 정리해야 하지만,
+              레나의 가방에서 몰래 꺼낸 봉투가 마음에 걸린다.
+            </p>
+            <dl>
+              <div>
+                <dt>공개 알리바이</dt>
+                <dd id="characterAlibi">8시 50분부터 손님방에서 참가자 명단을 정리했다.</dd>
+              </div>
+              <div>
+                <dt>숨은 의심</dt>
+                <dd id="characterSecret">여행 경비 문제를 레나에게 들켰다.</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="clue-section" id="clues">
+        <div class="section-inner">
+          <div class="section-heading">
+            <h2>단서는 안개처럼 흩어지고, 말은 서로를 겨눈다.</h2>
+            <p>
+              태블릿 맵에서 장소를 선택하면 단서 카드가 공개됩니다. 홍보 페이지에서는
+              핵심 단서 일부만 티저로 보여줍니다.
+            </p>
+          </div>
+
+          <div class="clue-strip" aria-label="단서 카드 티저">
+            <article class="clue-card">
+              <span>01</span>
+              <h3>깨진 유자주 잔</h3>
+              <p>잔 안쪽에서 쓴 냄새와 약초 가루가 발견된다.</p>
+              <em>毒が検出されました。</em>
+            </article>
+            <article class="clue-card">
+              <span>02</span>
+              <h3>익명 메시지</h3>
+              <p>“정원 우물 앞에서. 옛일을 끝내자.”</p>
+              <em>井戸の前で会いましょう。</em>
+            </article>
+            <article class="clue-card">
+              <span>03</span>
+              <h3>젖은 게타 발자국</h3>
+              <p>주방 뒷문에서 정원으로 이어진 작은 발자국.</p>
+              <em>足跡は庭へ続いています。</em>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="youtube-player" id="youtubePlayer" aria-hidden="true"></div>
+    <script src="./script.js"></script>
+  </body>
 </html>

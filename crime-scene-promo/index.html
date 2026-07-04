@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="컬컴 일본어 크라임씬 모임 홍보 페이지" />
+  <title>컬컴 일본어 크라임씬</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #fff7e8;
+      --muted: #d8c198;
+      --red: #b83232;
+      --gold: #d6a75d;
+      --bg: #08090b;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body {
+      background:
+        radial-gradient(circle at 52% 8%, rgba(184, 50, 50, .28), transparent 32rem),
+        radial-gradient(circle at 10% 90%, rgba(214, 167, 93, .16), transparent 28rem),
+        linear-gradient(180deg, rgba(6, 9, 12, .55), rgba(6, 7, 9, .98)),
+        repeating-linear-gradient(115deg, rgba(255, 255, 255, .045) 0 1px, transparent 1px 12px),
+        #08090b;
+    }
+    main {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 24px 18px 42px;
+    }
+    .hero {
+      min-height: 92svh;
+      display: grid;
+      align-content: center;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(214, 167, 93, .7);
+      border-radius: 8px;
+      background: rgba(255, 247, 232, .08);
+      color: var(--gold);
+    }
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: .16em;
+    }
+    h1 {
+      margin: 16px 0 0;
+      font-size: clamp(42px, 15vw, 86px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+    .lead {
+      color: #f3dfb9;
+      font-size: clamp(18px, 4.8vw, 25px);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .panel {
+      border: 1px solid rgba(214, 167, 93, .45);
+      background: rgba(9, 11, 13, .76);
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+    }
+    .facts {
+      display: grid;
+      gap: 10px;
+    }
+    .fact {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 14px;
+      border-radius: 6px;
+      background: rgba(255, 247, 232, .08);
+      border: 1px solid rgba(255, 247, 232, .12);
+    }
+    .fact b { color: var(--gold); }
+    .survey {
+      margin: 12px 0 0;
+      color: #f4dfba;
+      line-height: 1.55;
+    }
+    section { padding: 34px 0; }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+    }
+    p { line-height: 1.7; }
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      padding: 18px;
+      border-radius: 8px;
+      background: rgba(255, 247, 232, .08);
+      border: 1px solid rgba(255, 247, 232, .12);
+    }
+    .card strong {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 24px 0 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="brand"><span class="mark">CC</span><span>CULCOM JAPANESE CRIME SCENE</span></div>
+      <div>
+        <div class="eyebrow">매번 다른 컨셉으로 열리는 일본어 추리 모임</div>
+        <h1>컬컴<br />일본어<br />크라임씬</h1>
+      </div>
+      <p class="lead">놀러 간 여행지, 닫힌 방, 사라진 알리바이. 참가자는 각자의 비밀을 숨긴 채 범인을 찾고 일본어로 의심을 주고받습니다.</p>
+      <div class="panel">
+        <div class="facts">
+          <div class="fact"><b>1. 인원</b><span>4명부터</span></div>
+          <div class="fact"><b>2. 참가비</b><span>5천원</span></div>
+        </div>
+        <p class="survey">3. 시나리오는 매번 참가자에게 설문조사해서 컨셉을 조사해 매번 다르게 기획하겠음.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>진행 방식</h2>
+      <div class="cards">
+        <div class="card"><strong>캐릭터 배정</strong>각자 역할과 비밀, 알리바이를 받습니다.</div>
+        <div class="card"><strong>증거 공개</strong>단서가 공개될수록 서로의 말이 어긋납니다.</div>
+        <div class="card"><strong>추리와 투표</strong>질문하고 의심하고 마지막에 범인을 지목합니다.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>참가 안내</h2>
+      <p>일본어 실력보다 중요한 건 몰입과 추리입니다. 초급자는 한국어를 섞어도 괜찮고, 역할극에 부담 없는 방식으로 진행합니다.</p>
+    </section>
+
+    <footer>컬컴 일본어 모임 | Crime Scene Promotion</footer>
+  </main>
+</body>
+</html>
